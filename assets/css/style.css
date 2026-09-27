@@ -1,0 +1,167 @@
+:root {
+    --primary-color: #1a237e;
+    --primary-light: #534bae;
+    --primary-dark: #000051;
+    --success-color: #2e7d32;
+    --warning-color: #f57c00;
+    --danger-color: #c62828;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.scholarship-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    border-radius: 12px;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.stat-card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.status-tracker {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 30px 0;
+}
+
+.status-tracker::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #dee2e6;
+    z-index: 0;
+}
+
+.status-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.status-step .circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.status-step.active .circle {
+    background: var(--primary-color);
+    color: white;
+}
+
+.status-step.completed .circle {
+    background: var(--success-color);
+    color: white;
+}
+
+.admin-sidebar {
+    min-height: 100vh;
+    background: var(--primary-dark);
+    color: white;
+}
+
+.admin-sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 2px 10px;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.table-responsive {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(26, 35, 126, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.notification-item {
+    padding: 15px;
+    border-left: 4px solid transparent;
+    transition: background 0.2s;
+}
+
+.notification-item:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.notification-item.unread {
+    background: rgba(26, 35, 126, 0.05);
+    border-left-color: var(--primary-color);
+}
+
+.notification-item.info { border-left-color: #17a2b8; }
+.notification-item.success { border-left-color: var(--success-color); }
+.notification-item.warning { border-left-color: var(--warning-color); }
+.notification-item.danger { border-left-color: var(--danger-color); }
+
+[data-bs-theme="dark"] .card { background-color: #2b3035; }
+[data-bs-theme="dark"] .bg-light { background-color: #212529 !important; }
+[data-bs-theme="dark"] .card-header.bg-white,
+[data-bs-theme="dark"] .bg-white { background-color: #2b3035 !important; }
+[data-bs-theme="dark"] .table { color: #dee2e6; }
+
+@media (max-width: 768px) {
+    .hero-section { min-height: 300px; text-align: center; }
+    .hero-section h1 { font-size: 2rem; }
+    .stat-card { margin-bottom: 15px; }
+}

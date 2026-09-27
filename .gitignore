@@ -1,0 +1,24 @@
+# Uploaded user files (privacy)
+assets/uploads/transcripts/*
+assets/uploads/documents/*
+assets/uploads/recommendations/*
+!assets/uploads/transcripts/.gitkeep
+!assets/uploads/documents/.gitkeep
+!assets/uploads/recommendations/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+*.bak
+~*
